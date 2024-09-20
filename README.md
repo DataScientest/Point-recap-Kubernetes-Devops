@@ -1,15 +1,15 @@
 # Dépôt point recapitulatif Kubernetes Datascientest
-
-### ci dessous la liste des commandes :
-
+```shell
 kubectl apply -f .
-# install etcdctl https://github.com/etcd-io/etcd/releases
+```
+
+### install etcdctl https://github.com/etcd-io/etcd/releases
 kubectl -n kube-system get pod/etcd-k8s-master -o=jsonpath='{$.spec.containers[:1].image}'
 
 #debu install etcd
 ETCD_VER=v3.5.10
 
-# choose either URL
+### choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
 GITHUB_URL=https://github.com/etcd-io/etcd/releases/download
 DOWNLOAD_URL=${GOOGLE_URL}
